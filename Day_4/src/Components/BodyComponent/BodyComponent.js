@@ -47,7 +47,7 @@ const BodyComponent = () => {
         "https://weekinmemes.com/img/templates/akshay-kumar-scheme-pose.png",
       name: "Raju",
       place: "Mumbai, Bangla no. 3",
-      College: "Lovely Professional University ",
+      company: "ITUS",
       designation: "Money Double Scheme Agent",
       linkedinProfile: "",
       discordId: "",

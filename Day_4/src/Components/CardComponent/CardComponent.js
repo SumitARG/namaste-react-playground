@@ -28,7 +28,7 @@ const CardComponent = (props) => {
       </div>
       <div className="company card-item-details">
         <img src={require("../../../assets/icons/job.svg")} />
-        <span>{company != "" ? company + "," : ""},</span>
+        <span>{company != "" ? company + "," : ""}</span>
         <span className="sub-text">{designation != "" ? designation : ""}</span>
       </div>
       <hr />
