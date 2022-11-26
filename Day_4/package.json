@@ -2,11 +2,15 @@
   "name": "day_4",
   "version": "1.0.0",
   "description": "",
-  "main": "App.js",
+  "source": "src/index.html",
+  "main": "index.js",
+  "targets": {
+    "main": false
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "",
