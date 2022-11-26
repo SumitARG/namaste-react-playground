@@ -1,0 +1,63 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #fff;
+    font-size: 14px;
+}
+
+.card>div {
+    margin-top: 14px;
+}
+
+.card:hover {
+    border: 1px solid #d3d5df;
+    box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+    transform: scale(1.02);
+    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card>img {
+    height: 160px;
+    width: 254px;
+    object-fit: cover;
+}
+
+.card>hr {
+    color: lightgray;
+    border-width: 0.5px;
+    width: 100%;
+    margin-top: 14px;
+}
+
+.card-item-details {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-item-details>img {
+    height: 14px;
+}
+
+.card-item-details>.sub-text {
+    color: #686b78;
+}
+
+.name {
+    font-size: 17px;
+}
+
+.linkedin>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.linkedin>a:hover {
+    text-decoration: underline;
+    color: inherit;
+    transform: scale(1.05);
+    transition: transform 0.1s ease-in-out;
+}
