@@ -1,3 +1,4 @@
+import {useState} from "react";
 import "./CardComponent.css";
 
 const CardComponent = (props) => {
@@ -10,6 +11,7 @@ const CardComponent = (props) => {
     linkedinProfile,
     discordId,
   } = props.data;
+
   return (
     <div className="card">
       <img

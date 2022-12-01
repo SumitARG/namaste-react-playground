@@ -1,8 +1,8 @@
 .cards-container{
-    padding-top: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 100%;
     flex-wrap: wrap;
+    margin: 15px;
 }
