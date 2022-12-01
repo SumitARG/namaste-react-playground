@@ -1,8 +1,4 @@
-import CardComponent from "../CardComponent/CardComponent";
-import "./BodyComponent.css";
-
-const BodyComponent = () => {
-  const cardsList = [
+const CARDS_LIST = [
     {
       photo:
         "https://scontent.fblr1-4.fna.fbcdn.net/v/t39.30808-6/300263394_8002850723090093_2751057166146335726_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4RmZpGywgsIAX8Cp-h-&_nc_ht=scontent.fblr1-4.fna&oh=00_AfD5NI7x4rCyqYs04MAAh6hq91QixLQNJQB-ce2T8uynwQ&oe=6385377D",
@@ -63,13 +59,4 @@ const BodyComponent = () => {
     },
   ];
 
-  return (
-    <div className="cards-container">
-      {cardsList.map((card, i) => (
-        <CardComponent data={card} key={i} />
-      ))}
-    </div>
-  );
-};
-
-export default BodyComponent;
+  export default CARDS_LIST;
