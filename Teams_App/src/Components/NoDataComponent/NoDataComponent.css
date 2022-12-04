@@ -1,0 +1,9 @@
+.no-data-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.no-data-container > img{
+    width: 40%;
+}
