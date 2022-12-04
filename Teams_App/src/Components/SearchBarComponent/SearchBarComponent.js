@@ -2,35 +2,30 @@ import { useState } from "react";
 import "./SearchBarComponent.css";
 import CARDS_LIST from "../../Data/TeamData";
 
+const getFilteredData = (search) => {
+  return CARDS_LIST.filter((card) =>
+    card.name.toLowerCase().includes(search.toLowerCase())
+  );
+};
+
 const SearchBarComponent = ({ setCardsList }) => {
   /**
    * getFilteredData
-   * @param {*} search
+   * @param {string} search
    * @returns List of filtered cards matching the searched pattern
    */
-  const getFilteredData = (search) => {
-    return CARDS_LIST.filter((card) =>
-      card.name.toLowerCase().includes(search.toLowerCase())
-    );
-  };
 
   //   State variables for type time and search string
   const [searchText, setSearchText] = useState("");
-  const [typeTime, setTypeTime] = useState(true);
-
   /**
    * inputChangeHandler
-   * @param {*} event
+   * @param {InputEvent | ChangeEvent} event
    * Event handler for the form -> onInput and onSubmit
    */
   const inputChangeHandler = (event) => {
     event.preventDefault();
     if (event._reactName == "onInput") {
-      if (typeTime == true) {
-        setCardsList(getFilteredData(event.target.value));
-        setTypeTime(false);
-        setTimeout(setTypeTime(true), 100);
-      }
+      setCardsList(getFilteredData(event.target.value));
     } else {
       setCardsList(getFilteredData(event.target.elements.searchText.value));
     }

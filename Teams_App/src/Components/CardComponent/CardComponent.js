@@ -1,4 +1,3 @@
-import {useState} from "react";
 import "./CardComponent.css";
 
 const CardComponent = (props) => {
