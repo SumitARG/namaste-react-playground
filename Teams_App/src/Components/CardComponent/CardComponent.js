@@ -1,48 +1,57 @@
 import "./CardComponent.css";
+import locationImg from "../../../assets/icons/location.svg";
+import defaultPersonImg from "../../../assets/icons/person.svg";
+import companyImg from "../../../assets/icons/job.svg";
+import companyImg from "../../../assets/icons/job.svg";
+import githubImg from "../../../assets/icons/github.svg";
 
 const CardComponent = (props) => {
   const {
-    photo,
+    avatar_url,
     name,
-    place,
+    location,
     company,
-    designation,
-    linkedinProfile,
-    discordId,
+    login,
   } = props.data;
 
   return (
     <div className="card">
       <img
-        src={photo}
+        src={avatar_url}
         onError={({ currentTarget }) => {
           currentTarget.onerror = null; // prevents looping
-          currentTarget.src = require("../../../assets/icons/person.svg");
+          currentTarget.src = defaultPersonImg;
         }}
         alt="No picture available"
       />
       <div className="name">{name != "" ? name : "-"}</div>
       <hr />
       <div className="address card-item-details">
-        <img src={require("../../../assets/icons/location.svg")} />
-        <span>{place != "" ? place : "-"}</span>
+        <img src={locationImg} />
+        <span>{location != "" ? location : "-"}</span>
       </div>
       <div className="company card-item-details">
-        <img src={require("../../../assets/icons/job.svg")} />
-        <span>{company != "" ? company + "," : ""}</span>
-        <span className="sub-text">{designation != "" ? designation : ""}</span>
+        <img src={companyImg} />
+        <span>{company != "" ? company : ""}</span>
+        {/* <span className="sub-text">{designation != "" ? designation : ""}</span> */}
       </div>
       <hr />
-      <div className="linkedin card-item-details">
-        <img src={require("../../../assets/icons/linkedin.svg")} />
-        <a href={linkedinProfile} target="_blank">
-          {linkedinProfile != "" ? name : "-"}
+      <div className="git card-item-details">
+        <img src={githubImg} />
+        <a href={`https://github.com/${login}`} target="_blank">
+          {login != "" ? login : "-"}
         </a>
       </div>
-      <div className="discord-id card-item-details">
+      {/* <div className="linkedin card-item-details">
+        <img src={require("../../../assets/icons/linkedin.svg")} />
+        <a href={linkedinProfile} target="_blank">
+          {(linkedinProfile || linkedinProfile != "") ? linkedinProfile : "-"}
+        </a>
+      </div> */}
+      {/* <div className="discord-id card-item-details">
         <img src={require("../../../assets/icons/discord.svg")} />
-        <span>{discordId != "" ? discordId : "-"}</span>
-      </div>
+        <span>{(discordId || discordId != "") ? discordId : "-"}</span>
+      </div> */}
     </div>
   );
 };

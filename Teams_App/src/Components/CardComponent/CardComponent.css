@@ -51,12 +51,12 @@
     font-size: 17px;
 }
 
-.linkedin>a {
+.linkedin, .git>a {
     text-decoration: none;
     color: inherit;
 }
 
-.linkedin>a:hover {
+.linkedin, .git>a:hover {
     text-decoration: underline;
     color: inherit;
     transform: scale(1.05);
