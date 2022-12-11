@@ -1,8 +1,4 @@
-.cards-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 100%;
-    flex-wrap: wrap;
+.body-component{
+    padding-top: 100px;
     margin: 15px;
 }

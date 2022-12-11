@@ -1,9 +1,9 @@
 import "./CardComponent.css";
-import locationImg from "../../../assets/icons/location.svg";
-import defaultPersonImg from "../../../assets/icons/person.svg";
-import companyImg from "../../../assets/icons/job.svg";
-import companyImg from "../../../assets/icons/job.svg";
-import githubImg from "../../../assets/icons/github.svg";
+import locationImg from "../../../../assets/icons/location.svg";
+import defaultPersonImg from "../../../../assets/icons/person.svg";
+import companyImg from "../../../../assets/icons/job.svg";
+import companyImg from "../../../../assets/icons/job.svg";
+import githubImg from "../../../../assets/icons/github.svg";
 
 const CardComponent = (props) => {
   const {

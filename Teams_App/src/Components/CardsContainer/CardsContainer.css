@@ -1,0 +1,13 @@
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.link-plain{
+    text-decoration:none;
+    color: inherit;
+    display: flex;
+}

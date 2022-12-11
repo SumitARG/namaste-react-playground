@@ -1,0 +1,9 @@
+.path-error-component{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.path-error-component > img {
+    width: 40%;
+}
