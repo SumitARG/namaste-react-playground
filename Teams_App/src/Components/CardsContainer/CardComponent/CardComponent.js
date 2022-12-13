@@ -38,9 +38,9 @@ const CardComponent = (props) => {
       <hr />
       <div className="git card-item-details">
         <img src={githubImg} />
-        <a href={`https://github.com/${login}`} target="_blank">
+        {/* <a href={`https://github.com/${login}`} target="_blank">
           {login != "" ? login : "-"}
-        </a>
+        </a> */}
       </div>
       {/* <div className="linkedin card-item-details">
         <img src={require("../../../assets/icons/linkedin.svg")} />

@@ -27,8 +27,8 @@ const CardsContainer = () => {
       <div className="cards-container">
         {cardsList.length > 0 ? (
           cardsList.map((card, i) => (
-            <Link to={`/team-member-details/` + card.login} className="link-plain">
-              <CardComponent data={card} key={card.login} />
+            <Link to={`/team-member-details/` + card.login} key={card.login}  className="link-plain">
+              <CardComponent data={card}/>
             </Link>
           ))
         ) : (

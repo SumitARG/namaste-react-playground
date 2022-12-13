@@ -13,7 +13,7 @@ const DetailsPage = () => {
     setUserDetails(users[0]);
   };
 
-  useEffect(getUsersDetails, []);
+  useEffect(() => {getUsersDetails()}, []);
 
   return (
     <div className="details-page">
