@@ -16,11 +16,12 @@ const CardsContainer = lazy(() =>
 const AppRouter = createBrowserRouter([
   {
     path: "/",
-    element: (<Navigate to="/members-list"></Navigate>),
+    element: <AppLayoutComponent />,
     errorElement: <PathErrorComponent />,
     children: [
       {
-        path: "/members-list",
+        index: true,
+        // path: "/members-list",
         element: (
           <Suspense>
             <CardsContainer />

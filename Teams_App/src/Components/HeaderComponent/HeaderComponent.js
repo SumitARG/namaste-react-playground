@@ -13,7 +13,7 @@ const HeaderComponent = () => {
         <Link className="header-link" to="/about-us/profile">
           <span>About Us</span>
         </Link>
-        <Link className="header-link" to="/members-list">
+        <Link className="header-link" to="/">
           <span>Users</span>
         </Link>
     </div>
