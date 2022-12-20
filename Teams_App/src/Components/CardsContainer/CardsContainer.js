@@ -11,7 +11,13 @@ const CardsContainer = () => {
   const [userDetails, setUserDetails] = useState([]);
 
   const getUsersDetails = async () => {
-    const userNames = ["SumitARG", "ketanmalik", "aravindFrontEnd"];
+    const userNames = [
+      "ketanmalik",
+      "SumitARG",
+      "aravindFrontEnd",
+      "Ehraz98",
+      "pandeymeenakshi",
+    ];
     let users = await getUsersData(userNames);
     setUserDetails(users);
     setCardsList(users);
@@ -27,8 +33,12 @@ const CardsContainer = () => {
       <div className="cards-container">
         {cardsList.length > 0 ? (
           cardsList.map((card, i) => (
-            <Link to={`/team-member-details/` + card.login} key={card.login}  className="link-plain">
-              <CardComponent data={card}/>
+            <Link
+              to={`/team-member-details/` + card.login}
+              key={card.login}
+              className="link-plain"
+            >
+              <CardComponent data={card} />
             </Link>
           ))
         ) : (
