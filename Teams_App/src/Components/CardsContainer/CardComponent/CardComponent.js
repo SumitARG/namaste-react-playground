@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import ThemeContext from "../../../Context/ThemeContext";
 import "./CardComponent.css";
 import locationImg from "../../../../assets/icons/location.svg";
 import defaultPersonImg from "../../../../assets/icons/person.svg";
@@ -14,8 +16,10 @@ const CardComponent = (props) => {
     login,
   } = props.data;
 
+  const {theme} = useContext(ThemeContext);
+
   return (
-    <div className="card">
+    <div className={theme === "dark"?"card card-dark":"card"}>
       <img
         src={avatar_url}
         onError={({ currentTarget }) => {
