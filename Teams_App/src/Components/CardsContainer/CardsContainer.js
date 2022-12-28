@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { getUsersData } from "../../Helpers/apiservice";
+import ThemeContext from "../../Context/ThemeContext";
 import CardComponent from "./CardComponent/CardComponent";
 import NoDataComponent from "../NoDataComponent/NoDataComponent";
 import SearchBarComponent from "../SearchBarComponent/SearchBarComponent";
@@ -9,6 +10,7 @@ import { Link } from "react-router-dom";
 const CardsContainer = () => {
   const [cardsList, setCardsList] = useState([]);
   const [userDetails, setUserDetails] = useState([]);
+  const {theme} = useContext(ThemeContext);
 
   const getUsersDetails = async () => {
     const userNames = ["SumitARG", "ketanmalik", "aravindFrontEnd"];
@@ -22,7 +24,7 @@ const CardsContainer = () => {
   }, []);
 
   return (
-    <>
+    <div className={theme==="dark"?"dark-container":""}>
       <SearchBarComponent setCardsList={setCardsList} cardsList={userDetails} />
       <div className="cards-container">
         {cardsList.length > 0 ? (
@@ -35,7 +37,7 @@ const CardsContainer = () => {
           <NoDataComponent />
         )}
       </div>
-    </>
+    </div>
   );
 };
 

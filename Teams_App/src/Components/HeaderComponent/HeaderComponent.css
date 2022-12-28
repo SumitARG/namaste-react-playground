@@ -34,6 +34,12 @@
     height: 60px;
 }
 
+.menu-items{
+    gap: 3%;
+    display: flex;
+    flex: 1;
+}
+
 .header-link{
     text-decoration: none;
     color: black;
@@ -44,4 +50,19 @@
 .header-link:hover{
     transform: scale(1.1);
     transition: transform 0.5s ease-in-out;
+}
+
+.toggle-color{
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+.header-dark{
+    color: white;
+    background: gray;
+}
+
+.header-dark > .menu-items >.header-link {
+    color: white;
 }

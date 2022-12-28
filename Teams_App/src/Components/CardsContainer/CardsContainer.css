@@ -4,10 +4,14 @@
     justify-content: space-between;
     max-width: 100%;
     flex-wrap: wrap;
+    margin: 0px 10px;
 }
 
 .link-plain{
     text-decoration:none;
     color: inherit;
     display: flex;
+}
+.dark-container{
+    background: #525151;
 }
