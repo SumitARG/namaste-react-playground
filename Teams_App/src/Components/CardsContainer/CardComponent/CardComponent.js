@@ -46,16 +46,6 @@ const CardComponent = (props) => {
           {login != "" ? login : "-"}
         </a> */}
       </div>
-      {/* <div className="linkedin card-item-details">
-        <img src={require("../../../assets/icons/linkedin.svg")} />
-        <a href={linkedinProfile} target="_blank">
-          {(linkedinProfile || linkedinProfile != "") ? linkedinProfile : "-"}
-        </a>
-      </div> */}
-      {/* <div className="discord-id card-item-details">
-        <img src={require("../../../assets/icons/discord.svg")} />
-        <span>{(discordId || discordId != "") ? discordId : "-"}</span>
-      </div> */}
     </div>
   );
 };

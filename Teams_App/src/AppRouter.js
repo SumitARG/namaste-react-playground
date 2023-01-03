@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import AppLayoutComponent from "./AppLayoutComponent";
 import DetailsPage from "./Components/DetailsPage/DetailsPage";
+import LoginComponent from "./Components/LoginComponent/LoginComponent";
 import PathErrorComponent from "./Components/PathErrorComponent/PathErrorComponent";
 import ProfileComponent from "./Components/ProfileComponent/ProfileComponent";
 
@@ -46,6 +47,10 @@ const AppRouter = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "/login",
+        element: <LoginComponent/>
+      }
     ],
   },
 ]);

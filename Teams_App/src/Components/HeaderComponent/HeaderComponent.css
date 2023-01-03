@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -15,7 +15,7 @@
     padding: 0 20px;
 }
 
-.company-logo{
+.company-logo {
     font-size: 30px;
     gap: 10px;
     display: flex;
@@ -25,44 +25,63 @@
     font-family: fantasy;
 }
 
-.company-logo:hover{
+.company-logo:hover {
     transform: scale(1.1);
     transition: transform 0.5s ease-in-out;
 }
 
-.company-logo > img {
+.company-logo>img {
     height: 60px;
 }
 
-.menu-items{
+.menu-items {
     gap: 3%;
     display: flex;
     flex: 1;
 }
 
-.header-link{
+.header-link {
     text-decoration: none;
     color: black;
     display: flex;
     align-items: center;
 }
 
-.header-link:hover{
+.header-link:hover {
     transform: scale(1.1);
     transition: transform 0.5s ease-in-out;
 }
 
-.toggle-color{
+.cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-color {
     display: flex;
     align-items: center;
     gap: 1%;
 }
 
-.header-dark{
+.header-dark {
     color: white;
     background: gray;
 }
 
-.header-dark > .menu-items >.header-link {
+.header-dark>.menu-items>.header-link {
     color: white;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 0px;
+}
+
+.user-image {
+    border-radius: 50%;
+    height: 70%;
 }
